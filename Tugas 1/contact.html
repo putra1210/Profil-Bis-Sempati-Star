@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="id">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Kontak - Sempati Star</title><link rel="stylesheet" href="css/style.css"/><script src="https://code.jquery.com/jquery-3.6.0.min.js"></script></head>
+<body>
+<header class="site-header"><div class="container nav-wrap"><a class="logo" href="index.html"><img src="images/bus-exterior.jpg" alt="logo"/><span>Sempati Star</span></a><nav class="nav"><a href="index.html">Beranda</a><a href="about.html">Tentang</a><a href="contact.html" class="active">Kontak</a></nav></div></header>
+<main class="container content"><h1>Kontak Kami</h1><p class="lead">Isi form berikut untuk menanyakan jadwal atau memberi masukan.</p>
+<form id="contactForm" class="contact-form" method="post" action="contact.php">
+  <div class="row">
+    <label class="half">Nama lengkap<input type="text" name="name" id="name" required/></label>
+    <label class="half">Email<input type="email" name="email" id="email" required/></label>
+  </div>
+  <div class="row">
+    <label class="half">Nomor Telepon<input type="tel" name="phone" id="phone"/></label>
+    <label class="half">Subjek<input type="text" name="subject" id="subject" placeholder="(opsional)"/></label>
+  </div>
+  <label>Pesan<textarea name="message" id="message" rows="6" required></textarea></label>
+  <div class="form-actions"><button type="submit" class="btn">Kirim</button><button type="button" id="demoFill" class="btn ghost">Isi contoh</button></div>
+  <div id="formMsg" class="form-msg"></div>
+</form>
+<aside class="contact-info"><h3>Informasi Kantor</h3><p>Jl. Pahlawan No. 88, Surabaya</p><p>Telp: (031) 1234 567</p><p>Email: info@sempatistar.co.id</p></aside>
+</main>
+<footer class="site-footer"><div class="container"><small>© <span id="yearContact"></span> Sempati Star</small></div></footer>
+<script src="js/script.js"></script>
+<script>document.getElementById('yearContact').textContent=new Date().getFullYear();$('#demoFill').click(function(){ $('#name').val('Andi Pratama'); $('#email').val('andi@example.com'); $('#phone').val('081234567890'); $('#message').val('Halo, saya ingin menanyakan jadwal Surabaya → Yogyakarta.'); });</script>
+</body></html>
